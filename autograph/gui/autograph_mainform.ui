@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1000</width>
+    <height>750</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,25 +19,87 @@
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>120</width>
-      <height>541</height>
+      <width>221</width>
+      <height>701</height>
      </rect>
     </property>
     <property name="title">
      <string>Controls</string>
     </property>
+    <widget class="QLabel" name="label_Series1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Series 1:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Series2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Series 2:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEdit_Series1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>201</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEdit_Series2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>201</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_Graph">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>240</x>
       <y>0</y>
-      <width>651</width>
-      <height>541</height>
+      <width>751</width>
+      <height>701</height>
      </rect>
     </property>
     <property name="title">
-     <string>Graph</string>
+     <string>Real Time Graph</string>
     </property>
    </widget>
   </widget>
@@ -46,18 +108,22 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1000</width>
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuFIle">
+   <widget class="QMenu" name="menuFile">
     <property name="title">
      <string>File</string>
     </property>
    </widget>
-   <addaction name="menuFIle"/>
+   <addaction name="menuFile"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
