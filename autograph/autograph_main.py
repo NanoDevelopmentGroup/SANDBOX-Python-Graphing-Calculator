@@ -25,6 +25,7 @@ class AutoGraphMainWindow(QtWidgets.QMainWindow):
         # Load the main window GUI file
         uic.loadUi(find_form('autograph_mainform.ui'),self)
 
+        # Add the custom matplotlib widget to the defined groupbox
         self.plotwindow = MplWidget(self.groupBox_Graph)
 
         self.show()
@@ -43,6 +44,8 @@ class MplWidget(QtWidgets.QWidget):
         vertical_layout.addWidget(NavigationToolbar(self.canvas,self))
 
         self.canvas.axes = self.canvas.figure.add_subplot(111)
+        self.figure.tight_layout()
+        self.canvas.tight_layout = True
         group_box.setLayout(vertical_layout)
 
 
