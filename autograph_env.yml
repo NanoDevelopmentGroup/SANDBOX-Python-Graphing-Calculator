@@ -49,3 +49,5 @@ dependencies:
   - wincertstore=0.2
   - wrapt=1.12.1
   - zlib=1.2.11
+prefix:
+
