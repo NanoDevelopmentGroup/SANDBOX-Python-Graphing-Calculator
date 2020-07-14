@@ -13,7 +13,6 @@ import matplotlib.pyplot as plt
 
 # Local Application Libraries
 from gui.ui_utils import find_form
-from common.status_logger import QTextEditLogger
 
 # =====================================================================
 
@@ -28,9 +27,6 @@ class AutoGraphMainWindow(QtWidgets.QMainWindow):
 
         # Add the custom matplotlib widget to the defined groupbox
         self.plotwindow = MplWidget(self.groupBox_Graph)
-
-        # Add the status logging textbox to the statusbar
-        self.logStatusBox = QTextEditLogger(self.statusbar)
 
         self.show()
 
@@ -55,7 +51,7 @@ class MplWidget(QtWidgets.QWidget):
 
 def main():
     autograph_app = QtWidgets.QApplication(sys.argv)
-    mainWindow = AutoGraphMainWindow()
+    window = AutoGraphMainWindow()
     autograph_app.exec_()
 
 if __name__ == '__main__':

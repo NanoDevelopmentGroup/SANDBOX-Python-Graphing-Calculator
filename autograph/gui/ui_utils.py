@@ -23,5 +23,5 @@ def find_form(form_name: str) -> str:
         str -- The complete, rooted path to the ui file
     """
     ui_path = os.path.dirname(os.path.abspath(__file__))
-    ui_path += "/" + form_name
+    ui_path += "\\" + form_name
     return ui_path
