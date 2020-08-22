@@ -20,9 +20,6 @@ def test_logging():
     is in active development.
     """
     logging.debug('This is a DEBUG-level log.')
-    time.sleep(0.5)
     logging.info('This is an INFO-level log.')
-    time.sleep(0.5)
     logging.warning('This is a WARNING-level log.')
-    time.sleep(0.5)
     logging.error('This is an ERROR-level log.')
