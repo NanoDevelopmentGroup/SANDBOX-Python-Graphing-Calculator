@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>AutoGraph</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../resources/AG.ico</normaloff>../resources/AG.ico</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
@@ -148,7 +152,14 @@
     </property>
     <addaction name="actionExit"/>
    </widget>
+   <widget class="QMenu" name="menuTest">
+    <property name="title">
+     <string>Test</string>
+    </property>
+    <addaction name="actionLogging"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuTest"/>
   </widget>
   <widget class="QStatusBar" name="statusbar">
    <property name="enabled">
@@ -167,6 +178,11 @@
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionLogging">
+   <property name="text">
+    <string>Logging</string>
    </property>
   </action>
  </widget>
