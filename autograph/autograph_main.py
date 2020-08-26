@@ -3,8 +3,7 @@
 # Standard Libraries
 import sys
 import logging
-
-import time
+from logging.handlers import RotatingFileHandler
 
 # Third-party Libraries
 from PyQt5 import uic, QtWidgets
@@ -42,8 +41,9 @@ class AutoGraphMainWindow(QtWidgets.QMainWindow):
         )
         logging.getLogger().addHandler(self.logStatusBox)
 
-        # Add a log file for storing more verbose logs
-        self.logFile = logging.FileHandler('data/test-log.log')
+        # Add a rolling log file for storing more verbose logs
+        # Will create a new file when near to the specified maximum, keeping up to backupCount number of copies
+        self.logFile = RotatingFileHandler('data/logs/autograph-log.log', maxBytes=100000, backupCount=9)
         self.logFile.setFormatter(
             logging.Formatter(
                 '%(asctime)s | %(levelname)s | Module: %(module)s | Function: %(funcName)s | %(message)s'
@@ -54,7 +54,13 @@ class AutoGraphMainWindow(QtWidgets.QMainWindow):
         # Connect functions to controls
         self.actionLogging.triggered.connect(actions.test_logging)
 
+        logging.info('')
+        logging.info('Start to application session.')
+
+        # Show the GUI window
         self.show()
+
+        logging.info('Application main window launched.')
 
 class MplWidget(QtWidgets.QWidget):
     def __init__(self, group_box: QtWidgets.QGroupBox, parent=None):

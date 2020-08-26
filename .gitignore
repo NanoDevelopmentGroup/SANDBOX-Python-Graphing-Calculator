@@ -105,3 +105,6 @@ venv.bak/
 
 # vscode related settings
 .vscode
+
+# application log files
+data/logs
