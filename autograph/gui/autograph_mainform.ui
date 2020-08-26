@@ -152,14 +152,7 @@
     </property>
     <addaction name="actionExit"/>
    </widget>
-   <widget class="QMenu" name="menuTest">
-    <property name="title">
-     <string>Test</string>
-    </property>
-    <addaction name="actionLogging"/>
-   </widget>
    <addaction name="menuFile"/>
-   <addaction name="menuTest"/>
   </widget>
   <widget class="QStatusBar" name="statusbar">
    <property name="enabled">

@@ -51,9 +51,6 @@ class AutoGraphMainWindow(QtWidgets.QMainWindow):
         )
         logging.getLogger().addHandler(self.logFile)
 
-        # Connect functions to controls
-        self.actionLogging.triggered.connect(actions.test_logging)
-
         logging.info('')
         logging.info('Start to application session.')
 
