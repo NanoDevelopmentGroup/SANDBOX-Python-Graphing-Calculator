@@ -108,3 +108,4 @@ venv.bak/
 
 # application log files
 data/logs
+!data/logs/.gitkeep
