@@ -15,9 +15,13 @@ import time
 def test_logging():
     """This function serves to test the various levels of logging and
     the ability of each handler to emit messages.
-    THIS IS INTENDED TO BE A TEMPORARY FUNCTION, to assist in the
-    implementation of logging functionality while the logging branch
-    is in active development.
+    This function will remain to assist in sanity testing of logging
+    functionality.
+
+    Intended result is four log messages at varied levels, ordered:
+    DEBUG, INFO, WARNING, and ERROR. If all logs do not appear in
+    your targeted handler, check the configured log level of that
+    handler.
     """
     logging.debug('This is a DEBUG-level log.')
     logging.info('This is an INFO-level log.')
